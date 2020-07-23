@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10">
+            <div *ngFor="let entry of entries | keyvalue">
+                <div *ngFor="let section of entry.value[0].sec_details">
+                    <div *ngFor="let ques of section.sec_questions">
+                        <p class="float-right">Negative Marks : {{ques.neg_marks}}</p>
+                        <p class="float-right">Max Marks : {{ques.max_marks}}</p>
+                        <p>Ques: {{ ques.que }}</p>
+                        <div *ngFor="let question of ques.que | keyvalue">
+                            <br><br>{{ question.value.q_string }}<br><br>
+                            <div *ngFor="let opt of question.value.q_option>
+                                {{ opt }}
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

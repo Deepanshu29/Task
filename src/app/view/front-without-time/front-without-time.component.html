@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md">
+            <div *ngFor="let entry of entries | keyvalue">
+                <p class="float-right"> Test Time : {{ entry.value[0].test_time /3600 }} hrs</p>
+                <p class="float-left"> Test ID : {{ entry.value[0].test_id }}</p>
+                <h1 class="text-center mt-4">{{ entry.value[0].test_name }}</h1>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-8 offset-2 mt-3">
+                    <h3 class="text-center">RULES</h3>
+                    <ul>
+                        <li class="m-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, in.</li>
+                        <li class="m-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, in.</li>
+                        <li class="m-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, in.</li>
+                        <li class="m-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, in.</li>
+                        <li class="m-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, in.</li>
+                    </ul>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col-md-4 offset-4 text-center">
+                        <button class="btn btn-danger text-center">Start Test</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

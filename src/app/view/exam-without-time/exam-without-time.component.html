@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="float-right">
+            <div *ngFor="let entry of entries | keyvalue">
+                    <ul *ngFor="let secDetail of entry.value[0].sec_details">
+                       <li> {{ secDetail.sec_name[1] }} </li>
+                       <div *ngFor="let quesNo of secDetail.sec_questions | keyvalue">
+                        <a class="m-3 badge badge-danger d-inline" href="">{{ (quesNo.key)*1+1 | number }}</a>
+                        </div>
+                    </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
